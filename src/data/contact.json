@@ -1,0 +1,58 @@
+{
+  "HEAD": {
+    "en": "Contact",
+    "es": "Contacto"
+  },
+  "INPUT1": {
+    "LABEL": {
+      "en": "Name or Company",
+      "es": "Nombre o empresa"
+    },
+    "PLACEHOLDER": {
+      "en": "Name/Compnay",
+      "es": "Nombre/Empresa"
+    },
+    "TOOLTIP": {
+      "en": "How should we call you?",
+      "es": "¿Cómo deberíamos llamarte?"
+    }
+  },
+  "INPUT2": {
+    "LABEL": {
+      "en": "Email",
+      "es": "Email"
+    },
+    "PLACEHOLDER": {
+      "en": "Email",
+      "es": "Email"
+    },
+    "TOOLTIP": {
+      "en": "This information will only be used to contact you and we will not share it with third parties",
+      "es": "Este dato sólo lo utilizaremos para ponernos en contacto contigo y no lo vamos a compartir con terceros"
+    }
+  },
+  "TEXTAREA": {
+    "LABEL": {
+      "en": "Message",
+      "es": "Mensaje"
+    },
+    "PLACEHOLDER": {
+      "en": "How can we help?",
+      "es": "¿En qué te podemos ayudar?"
+    }
+  },
+  "CHECKBOX": {
+    "LABEL": {
+      "en": "I accept the Privacy Policy",
+      "es": "Acepto la política de privacidad"
+    }
+  },
+  "TEXT": {
+    "en": "If you prefer, you can contact us at",
+    "es": "Si lo prefieres puedes contactar con nosotros en"
+  },
+  "BUTTON": {
+    "en": "Send",
+    "es": "Enviar"
+  }
+}

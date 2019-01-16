@@ -1,0 +1,41 @@
+{
+  "LINK1": {
+    "TITLE":{
+      "en": "Home",
+      "es": "Inicio"  
+    },
+    "ANCHOR": "#introduction"
+  },
+  "LINK2": {
+    "TITLE":{
+      "en": "How it works",
+      "es": "Cómo funciona"  
+    },
+    "ANCHOR": "#steps"
+  },
+  "LINK3": {
+    "TITLE":{
+      "en": "Pricing",
+      "es": "Precio"  
+    },
+    "ANCHOR": "#price"
+  },
+  "LINK4": {
+    "TITLE":{
+      "en": "Clients",
+      "es": "Casos de éxito"  
+    },
+    "ANCHOR": "#clients"
+  },
+  "LINK5": {
+    "TITLE":{
+      "en": "Contact",
+      "es": "Contacto"  
+    },
+    "ANCHOR": "#contact"
+  },
+  "CTA": {
+    "en": "Request a demo",
+    "es": "Solicitar una demo"
+  }
+}

@@ -1,0 +1,21 @@
+/***
+ *  ⚛️ LINKS
+ *
+ *
+ ***/
+
+a {
+  text-decoration: underline;
+  color: $color-link;
+
+
+  &:visited {
+    color: $color-visited;
+  }
+
+  @include breakpoint(desktop) {
+    &:hover {
+      color: $color-hover;
+    }
+  }
+}

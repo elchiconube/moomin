@@ -1,0 +1,50 @@
+//- Form
+//-
+//- @example
+//-   +form()
+//-     +form__element({
+					type:'text', 
+					name:'name', 
+					tooltip:'¿Cómo deberiamos llamarte?', 
+					placeholder:'Nombre/Empresa', 
+					label:'Nombre o empresa', 
+					required:'true'
+				})
+//-
+//-
+//----------------------------------------------------------------------------------------------------------------
+
+mixin form()
+	form&attributes(attributes)
+		if block
+			block
+		else
+			p No content provided
+
+mixin form__element(options)
+	if (options.type === 'text' || options.type === 'email' || options.type === 'password' || options.type === 'textarea')
+		div(class=options.required ? 'required':'')
+			label(for=options.name)= options.label
+			if options.tooltip
+				+tooltip(options.tooltip)
+			if (options.type === 'textarea')
+				textarea(id=options.name, name=options.name, placeholder=options.placeholder, required=options.required)
+			else 
+				input(id=options.name, name=options.name, type=options.type, placeholder=options.placeholder, required=options.required)
+	if (options.type === 'checkbox')
+		.checkbox
+			input(id=options.name, name=options.name, type='checkbox', required=options.required)
+			label(for=options.name)= options.label
+	if (options.type === 'select')
+		.select
+			label(for=options.name)= options.label
+			select(id=options.name, name=options.name)
+				if options.options
+					each text in options.options
+						option(value=convertToClass(text))= text				
+	if (options.type === 'submit')
+		.actions
+			input(type='submit' id=options.name, name=options.name value=options.value )
+
+			
+-  function convertToClass(s) { return s.replace(' ', '-').toLowerCase(); };

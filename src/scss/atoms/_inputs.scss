@@ -1,0 +1,64 @@
+/***
+ *  ⚛️ INPUT
+ *
+ *
+ ***/
+ 
+input {
+  margin-bottom: $spacing-xs;
+
+  &[type='text'],
+  &[type='email'],
+  &[type='password'] {
+    display: block;
+    border: 1px solid $color-gray;
+    background-color: $color-white;
+    line-height: $spacing-xl;
+    width: 100%;
+    line-height: 20px;
+    padding: $spacing-s $spacing-m;
+    border-radius: $border-radius;
+    font-size: $mobile-font-size-s;
+
+    &:focus{
+      outline: 1px solid $color-primary;
+    }
+  }
+
+  &[type='button'],
+  &[type='submit'],
+  &[type='reset'] {
+    background-color: $color-secondary;
+    border: none;
+    border-radius: $border-radius;
+    color: $color-white;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    padding: $spacing-m $spacing-xl;
+    text-decoration: none;
+    font-size: $mobile-font-size-l;
+    
+    &:disabled,
+    &.disabled {
+      background-color: $color-gray;
+    }
+  
+  
+    @include breakpoint(desktop) {
+      &:hover {}
+  
+      &:pressed {}
+    }
+  
+  }
+
+  &[type='radio'],
+  &[type='checkbox'] {}
+
+  &:disabled,
+  .disabled {
+    background-color: $color-gray;
+  }
+}

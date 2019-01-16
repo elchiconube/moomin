@@ -1,0 +1,31 @@
+/***
+ *  ⚛️ GLOBAL
+ *
+ *  Global styles
+ *
+ ***/
+
+@import "../subatoms/_variables.scss";
+
+html {
+  font-family: $font-primary;
+  font-size: $font-size;
+  background-color: $color-white;
+  color: $color-black;
+  font-size: $font-size;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 $layout-xxs;
+  position: relative;
+
+  @include breakpoint(wide) {
+    padding: 0;
+  }
+}

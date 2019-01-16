@@ -1,0 +1,16 @@
+/***
+ *  🛵 MAIN
+ *
+ ***/
+
+ @import "../subatoms/_variables.scss";
+
+ 
+.main__content {
+  margin-top: $mobile-header;
+
+  @include breakpoint(tablet) {
+    margin-top: $tablet-header;
+  }
+  
+}

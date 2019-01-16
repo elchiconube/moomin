@@ -1,0 +1,19 @@
+/***
+ *  🛵 HEADER
+ *
+ ***/
+ 
+@import "../subatoms/_variables.scss";
+
+.main__header {
+  background-color: $color-primary;
+  color: $color-white;
+  height: $mobile-header;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: $z-index-xxl;
+  @include breakpoint(tablet) {
+    height: auto;
+  }
+}

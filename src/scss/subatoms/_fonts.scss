@@ -1,0 +1,21 @@
+/***
+ *  🖋 Fonts
+ *
+ *  Pegar fuente en Base64
+ *  Se puede hacer en: https://transfonter.org/
+ *
+ ***/
+
+
+
+ @font-face {
+  font-family: 'Barlow Regular';
+  font-display: fallback;
+  src: local('Barlow'), url('../fonts/Barlow-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow Medium';
+  font-display: fallback;
+  src: local('Barlow'), url('../fonts/Barlow-Medium.woff2') format('woff2');
+}

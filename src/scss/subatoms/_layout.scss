@@ -1,0 +1,46 @@
+/***
+ *  🛠 Layout
+ *
+ *  @breakpoints -  Definición de los breakpoints
+ *  @container - Definición de contenedor máximo
+ *  @header - Definición de alto de cabecera en móvil
+ *  @grid - Definición del grid
+ *
+ ***/
+
+
+/***
+ *  @breakpoints
+ *
+ *  Uso: @include breakpoint(desktop) {}
+ *
+ ***/
+
+ $breakpoints: (
+    mobile:  320px,
+    tablet:  800px,
+    desktop: 960px,
+    wide:    1300px
+);
+
+
+/***
+ *  @container
+ ***/
+
+$container : 1300px;
+
+
+/***
+ *  @container
+ ***/
+
+ $mobile-header : 55px;
+ $tablet-header : 113px;
+ $desktop-header : 113px;
+ 
+
+
+/***
+ *  @grid
+ ***/

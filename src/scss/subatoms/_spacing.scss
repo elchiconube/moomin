@@ -1,0 +1,59 @@
+/***
+ *  📏 Spacing
+ *
+ *  @spacing - Para modificar el box-model
+ *  @layout - Para aplicar en elementos del layout
+ *  @border - Para aplicar a los componentes
+ *  @z-index - Niveles de z-index para el proyecto
+ *
+ ***/
+
+
+/***
+ *  @spacing
+ ***/
+
+$spacing-xxxs:  .125rem;
+$spacing-xxs:   .25rem;
+$spacing-xs:    .5rem;
+$spacing-s:     .75rem;
+$spacing-m:     1rem;
+$spacing-l:     1.5rem;
+$spacing-xl:    2rem;
+$spacing-xxl:   2.5rem;
+$spacing-xxxl:  3rem;
+
+
+/***
+ *  @layout
+ ***/
+
+$layout-xxs:    1rem;
+$layout-xs:     1.5rem;
+$layout-s:      2rem;
+$layout-m:      3rem;
+$layout-l:      5rem;
+$layout-xl:     6rem;
+$layout-xxl:    10rem;
+
+
+/***
+ *  @borders
+ ***/
+
+$border-rounded:  100%;
+$border-radius:   4px;
+$border-squared:  0px;
+
+
+/***
+ *  @z-indez
+ ***/
+
+ $z-index-xs:  -2;
+ $z-index-s:   -1;
+ $z-index-m:    0;
+ $z-index-l:    1;
+ $z-index-xl:   2;
+ $z-index-xxl:  3;
+

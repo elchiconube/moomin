@@ -1,0 +1,88 @@
+/***
+ *  ⚛️ HEADINGS
+ *
+ *
+ ***/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-secondary;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: $mobile-font-size-head-1;
+
+  @include breakpoint(tablet) {
+    font-size: $tablet-font-size-head-1;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: $desktop-font-size-head-1;
+  }
+}
+
+h2 {
+  font-size: $mobile-font-size-head-2;
+
+  @include breakpoint(tablet) {
+    font-size: $tablet-font-size-head-2;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: $desktop-font-size-head-2;
+  }
+}
+
+h3 {
+  font-size: $mobile-font-size-head-3;
+
+  @include breakpoint(tablet) {
+    font-size: $tablet-font-size-head-3;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: $desktop-font-size-head-3;
+  }
+}
+
+h4 {
+  font-size: $mobile-font-size-xxl;
+
+  @include breakpoint(tablet) {
+    font-size: $tablet-font-size-xxl;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: $desktop-font-size-xxl;
+  }
+}
+
+h5 {
+  font-size: $mobile-font-size-xl;
+
+  @include breakpoint(tablet) {
+    font-size: $tablet-font-size-xl;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: $desktop-font-size-xl;
+  }
+}
+
+
+h6 {
+  font-size: $mobile-font-size-l;
+
+  @include breakpoint(tablet) {
+    font-size: $tablet-font-size-l;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: $desktop-font-size-l;
+  }
+}

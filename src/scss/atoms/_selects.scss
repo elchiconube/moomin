@@ -1,0 +1,22 @@
+/***
+ *  ⚛️ SELECT
+ *
+ *
+ ***/
+
+select {
+
+  &:disabled,
+  .disabled {
+    background-color: $color-gray;
+  }
+
+  option {
+
+    &:disabled,
+    .disabled {
+      background-color: $color-gray;
+    }
+
+  }
+}

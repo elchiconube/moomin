@@ -1,0 +1,3 @@
+//- +a('/url', 'text')(class="button")
+mixin a(href, name)
+  a(class!=attributes.class href=href)&attributes(attributes)= name

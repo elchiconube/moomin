@@ -1,0 +1,40 @@
+/***
+ *  ⚛️ BUTTONS
+ *
+ *
+ ***/
+
+.button {
+	background-color: $color-secondary;
+	border: none;
+	border-radius: $border-radius;
+	color: $color-white;
+	outline: none;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	padding: $spacing-m $spacing-xl;
+	text-decoration: none;
+	font-size: $mobile-font-size-l;
+	transition: all 200ms ease-in-out;
+
+	&:visited {
+		color: $color-white;
+	}
+
+	&:disabled,
+	&.disabled {
+		background-color: $color-gray;
+	}
+
+
+	@include breakpoint(desktop) {
+		&:hover {
+			background-color: darken($color-secondary, $dark);
+			color: $color-white;
+		}
+
+		&:pressed {}
+	}
+
+}

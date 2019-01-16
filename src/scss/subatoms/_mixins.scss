@@ -1,0 +1,97 @@
+/***
+ *  🛠️ Mixins
+ *
+ *  @animation - Animaciones
+ *  @breakpoint - Based on: http://www.sitepoint.com/cross-media-query-extend-sass/
+ *  @placeholder - Based on: http://www.sitepoint.com/cross-media-query-extend-sass/
+ *
+ ***/
+
+
+/***
+ *  @animation
+ ***/
+
+ $animation : blink !default;
+ $duration: 1s !default;
+ $timing: ease-in-out !default;
+ $delay: 0s !default;
+ $count: 1 !default;
+ 
+ @mixin animation ($animation, $duration, $timing, $delay, $count) {
+   animation-name: $animation;
+   animation-duration: $duration;
+   animation-timing-function: $timing;
+   animation-delay: $delay;
+   animation-iteration-count: $count;
+   animation-fill-mode: forwards;
+ }
+ 
+ @mixin keyframes ($animation-name) {
+   @keyframes #{$animation-name} {
+     @content;
+   }
+ }
+ 
+ 
+ /***
+  *  @breakpoint
+  ***/
+ 
+ $default-breakpoint: root;
+ $current-breakpoint: $default-breakpoint;
+ $placeholders: ();
+ 
+ @mixin breakpoint($breakpoint) {
+   $value: map-get($breakpoints, $breakpoint);
+ 
+   @if $value !=null {
+ 
+     $current-breakpoint: $breakpoint !global;
+ 
+     @media (min-width: $value) {
+       @content;
+     }
+ 
+     $current-breakpoint: $default-breakpoint !global;
+   }
+ 
+   @else {
+     @warn "Invalid breakpoint `#{$breakpoint}`.";
+   }
+ }
+ 
+ 
+ /***
+  *  @placeholder
+  ***/
+ 
+ @mixin placeholder($name) {
+   @if not index($placeholders, $name) {
+     $placeholders: append($placeholders, $name) !global;
+ 
+     @at-root {
+ 
+       @each $breakpoint,
+       $value in $breakpoints {
+         @media (min-width: $value) {
+           %#{$name}-#{$breakpoint} {
+             @content;
+           }
+         }
+       }
+ 
+       %#{$name}-#{$default-breakpoint} {
+         @content;
+       }
+     }
+   }
+ 
+   @else {
+     @warn "Placeholder `#{$name}` already exists.";
+   }
+ }
+ 
+ @mixin _($name) {
+   @extend %#{$name}-#{$current-breakpoint} !optional;
+ }

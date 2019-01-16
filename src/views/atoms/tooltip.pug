@@ -1,0 +1,34 @@
+//- Tooltip
+//-
+//- @example
+//-   +tooltip('Texto de ejemplo en tooltip')
+//-
+//----------------------------------------------------------------------------------------------------------------
+
+
+- var tooltips = 0
+
+mixin tooltip-js()
+  script.
+    window.onload = () =>{
+      let tooltipsArr = document.getElementsByClassName('tooltip');
+      for (let item of tooltipsArr) {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            item.classList.toggle('on')
+        }, false);
+      }
+    }
+
+
+mixin tooltip(text)
+  span.tooltip()&attributes(attributes)
+    button() ?
+    span(role='tooltip')= text
+  if tooltips < 1
+    +tooltip-js()    
+  - sliders++
+
+
+
+

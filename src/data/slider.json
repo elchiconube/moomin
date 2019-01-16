@@ -1,0 +1,32 @@
+{
+  "SLIDE1": {
+    "TITLE": {
+      "en": "Slider title 3",
+      "es": "Título slider"
+    },
+    "CTA": {
+      "en": "Button title",
+      "es": "Text botón"
+    }
+  },
+  "SLIDE2": {
+    "TITLE": {
+      "en": "Slider title 3",
+      "es": "Título slider"
+    },
+    "CTA": {
+      "en": "Button title",
+      "es": "Text botón"
+    }
+  },
+  "SLIDE3": {
+    "TITLE": {
+      "en": "Slider title 3",
+      "es": "Título slider"
+    },
+    "CTA": {
+      "en": "Button title",
+      "es": "Text botón"
+    }
+  }
+}

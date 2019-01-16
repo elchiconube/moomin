@@ -1,0 +1,89 @@
+/***
+ *  🎨 COLORS
+ *
+ *  @brand - Colores de la marca
+ *  @mods - Modificadores para funciones lighten y darken de SASS
+ *  @support - Colores utilizados para transmitir mensajes al usuario
+ *  @links - Colores utilizados para los textos enlazados
+ *  @neutral - Escala de grises que podemos utilizar para separar elementos de la UI
+ *  @social - Colores de las principales redes sociales
+ *
+ ***/
+
+ 
+/***
+ *  @brand
+ ***/
+
+$color-primary:     #DF902E;
+$color-secondary:   #2498FE;
+$color-tertiary:    #1A3346;
+$color-quaternary:  #DF902E;
+
+/***
+ *  @mods
+ ***/
+
+$light:    20%;
+$lighter:  55%;
+$lightest: 75%;
+
+$dark:     20%;
+$darker:   55%;
+$darkest:  75%;
+
+
+/***
+ *  @support
+ ***/
+
+$color-success:            #39CB4F;
+$color-error:              #F54B5E;
+$color-warning:            #E6B516;
+$color-info:               #17A2B9;
+
+ /***
+ *  @links
+ ***/
+
+$color-link:               #0000EE;
+$color-visited:            #551A8B;
+$color-hover:              #0202BD;
+
+
+/***
+ *  @neutral
+ ***/
+
+$color-black:              #000000;
+$color-black-lighten-30:   #4C4C4C;
+$color-black-lighten-60:   #999999;
+$color-white:              #FFFFFF;
+$color-darker-gray:        #222222;
+$color-dark-gray:          #4E4E4E;
+$color-dark-medium-gray:   #7A7A7A;
+$color-gray:               #BCBCBC;
+$color-light-medium-gray:  #E8E8E8;
+$color-light-gray:         #F4F4F4;
+$color-lighter-gray:       #FBFBFB;
+
+
+/***
+ *  @social
+ ***/
+
+$color-behance:             #1769FF;
+$color-dribbble:            #EA4C89;
+$color-dropbox:             #0061FF;
+$color-facebook:            #3B5998;
+$color-github:              #4078C0;
+$color-google-plus:         #D34836;
+$color-instagram:           #4C5FD7;
+$color-linkedin:            #0077B5;
+$color-pinterest:           #CB2027;
+$color-skype:               #00AFF0;
+$color-slack:               #6ECADC;
+$color-spotify:             #1ED760;
+$color-twitter:             #00B6F1;
+$color-vimeo:               #45BBFF;
+$color-youtube:             #FF0000;

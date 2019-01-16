@@ -1,0 +1,70 @@
+/***
+ *  🛴 FORM
+ *
+ *
+ ***/
+
+form,
+.form {
+  text-align: left;
+  
+  >div {
+    margin-bottom: $spacing-l;
+    position: relative;
+    text-align: left;
+    &.checkbox {
+
+      >input {
+        margin:0 $spacing-xxs 0 0;
+        display: inline-block;
+      
+      }
+
+      >label {
+        margin: 0;
+        display: inline-block;
+        font-size: $mobile-font-size-s;
+        font-family: $font-primary;
+      }
+    }
+
+    &.required {
+      label::after {
+        content: ' *';
+        display: inline-block;
+        vertical-align: top;
+        margin-left: $spacing-xxs;
+      }
+    }
+
+    &.error {
+      input {
+
+        &[type='text'],
+        &[type='email'],
+        &[type='password'] {
+          border-color: $color-error;
+        }
+      }
+    }
+  
+    &.success{
+      &::after{
+        position: absolute;
+        bottom: -8px;
+        right: -2px;
+        z-index: 3;
+        display: block;
+        content: '';
+        width: 23px;
+        height: 23px;
+        background: $color-white url('../img/icon-check.svg') center no-repeat;
+        background-size: 18px 18px;
+        border: 1px solid $color-white;
+        border-radius: 100%;
+        transition: all 1s ease-out;
+        border: 3px solid $color-white;
+      }
+    }
+  }
+}

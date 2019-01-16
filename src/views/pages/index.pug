@@ -1,0 +1,42 @@
+extends ../subatoms/base.pug
+
+block title
+  title Welcome to Moomin
+
+block description
+  meta(description='Welcome to Moomin')
+
+block content
+  section.container
+    +h1("Moomin")
+    p Welcome to Moomin yeah its awesome. Look the repository #[+a('http://phabricator.osoco.es/source/Moomin', 'here')(target="_blank")]
+
+    //- +icon-osoco(width="20%")
+
+    //- +glide({controls:false, bullets: 3, name:'slider'})
+    //-   +glide__slide
+    //-     div.container
+    //-       h1 #{SLIDER.SLIDE1.TITLE[lang]}
+    //-       p #[a(href='#contacto' class='button' title=SLIDER.SLIDE1.CTA[lang]) #{SLIDER.SLIDE1.CTA[lang]}]
+    //-     img(src='/img/slider-1.jpg', alt='Imagen de slider')
+    //-   +glide__slide 
+    //-     div.container
+    //-       h1 #{SLIDER.SLIDE2.TITLE[lang]}
+    //-       p #[a(href='#contacto' class='button' title=SLIDER.SLIDE2.CTA[lang]) #{SLIDER.SLIDE2.CTA[lang]}]
+    //-     img(src='/img/slider-1.jpg', alt='Imagen de slider')
+    //-   +glide__slide
+    //-     div.container
+    //-       h1 #{SLIDER.SLIDE3.TITLE[lang]}
+    //-       p #[a(href='#contacto' class='button' title=SLIDER.SLIDE3.CTA[lang]) #{SLIDER.SLIDE3.CTA[lang]}]
+    //-     img(src='/img/slider-1.jpg', alt='Imagen de slider')
+        
+    //- +form()
+    //-   +form__element({type:'text', name:'name', tooltip: CONTACT.INPUT1.TOOLTIP[lang], placeholder: CONTACT.INPUT1.PLACEHOLDER[lang], label: CONTACT.INPUT1.LABEL[lang], required:'required'})
+    //-   +form__element({type:'email', name:'email', tooltip: CONTACT.INPUT2.TOOLTIP[lang], placeholder: CONTACT.INPUT2.PLACEHOLDER[lang], label: CONTACT.INPUT2.LABEL[lang], required:'required'})
+    //-   +form__element({type:'textarea', name:'msg', placeholder: CONTACT.TEXTAREA.PLACEHOLDER[lang], label: CONTACT.TEXTAREA.LABEL[lang], required:'required'})
+    //-   +form__element({type:'checkbox', name:'privacy', label: CONTACT.CHECKBOX.LABEL[lang] })
+    //-   - var values =['Pedir presupuesto','Quiero una demostración', 'Otros']
+    //-   +form__element({type:'select', name:'selector', options:values })
+    //-   div
+    //-     small #{CONTACT.TEXT[lang]} #[a(href='mailto:info@contestia.es' title='Contestia email') info@contestia.es]
+    //-   +form__element({type:'submit', value: CONTACT.BUTTON[lang] })

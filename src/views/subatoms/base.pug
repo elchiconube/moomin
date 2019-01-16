@@ -1,0 +1,61 @@
+//- Los atoms y molecules estarán disponibles desde la base de HTML        
+include ../atoms/atoms
+include ../molecules/molecules
+
+doctype html
+html(lang=lang)
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, viewport-fit=cover")
+        link(rel="shortcut icon", href="img/favicon.ico")
+        link(rel="manifest" href="manifest.json")
+        //- Android devices
+        meta(name="theme-color" content="#182952")
+
+        //- iOS devices
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+        meta(name='apple-mobile-web-app-title' content='Project')
+
+        link(rel='apple-touch-icon' href='img/icons/icon-192x192.png')
+        link(rel='apple-touch-icon' sizes='152x152' href='img/icons/icon-152x152.png')
+        link(rel='apple-touch-icon' sizes='180x180' href='img/icons/icon-180x180.png')
+        link(rel='apple-touch-icon' sizes='167x167' href='img/icons/icon-167x167.png')
+
+        //- iPhone X (1125x2436)
+        link(rel='apple-touch-startup-image' media='(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)' href='img/icons-ios/apple-launch-1125x2436.png')
+        //- iPhone 8, 7, 6s, 6 (750x1334)
+        link(rel='apple-touch-startup-image' media='(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)' href='img/icons-ios/apple-launch-750x1334.png')
+        //- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242x2208)
+        link(rel='apple-touch-startup-image' media='(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)' href='img/icons-ios/apple-launch-1242x2208.png')
+        //- iPhone 5 (640x1136)
+        link(rel='apple-touch-startup-image' media='(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' href='img/icons-ios/apple-launch-640x1136.png')
+
+        block title
+            title Project || Lorem ipsum
+        block description
+            meta(name="description" content='Project te ayuda a definir y seleccionar los mejores candidatos para cualquier proceso de selección')
+        block keywords
+            meta(name="keywords" content='Lorem, ipsum')
+        link(rel='stylesheet', href='/css/style.css')
+        
+        //- LLamamos al shell para que cargue en linea
+        //- style(data-cache='static', data-type='text/css' data-path='/css/shell.css')
+        //-     include:clean-css:scss ../../scss/shell.scss
+
+        block components
+
+        //[if gt IE 10]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]
+        //[if gte IE 11]><link rel="stylesheet" type="text/css" href="/css/ie.css" /><![endif]
+    body
+        //[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+        include ../organisms/header
+        main.main__content
+            block content
+        include ../organisms/footer
+        script(src='/js/app.js')
+
+
+        
+

@@ -1,0 +1,26 @@
+/***
+ *  ⚛️ TEXTAREA
+ *
+ *
+ ***/
+
+textarea {
+  min-height: 150px;
+  border: 1px solid $color-gray;
+  line-height: $spacing-xl;
+  padding: $spacing-s $spacing-m;
+  width: 100%;
+  margin-bottom: $spacing-xs;
+  font-size: $mobile-font-size-s;
+  border-radius: $border-radius;
+  font-size: $mobile-font-size-s;
+
+  &:focus{
+    outline: 1px solid $color-primary;
+  }
+
+  &:disabled,
+  .disabled {
+    background-color: $color-gray;
+  }
+}

@@ -1,0 +1,28 @@
+mixin menu()
+  nav#menu
+    ul
+      li #[a(href=MENU.LINK1.ANCHOR title=MENU.LINK1.TITLE[lang] ) #{MENU.LINK1.TITLE[lang]}]
+      li #[a(href=MENU.LINK2.ANCHOR title=MENU.LINK2.TITLE[lang] ) #{MENU.LINK2.TITLE[lang]}]
+      li #[a(href=MENU.LINK3.ANCHOR title=MENU.LINK3.TITLE[lang] ) #{MENU.LINK3.TITLE[lang]}]
+      li #[a(href=MENU.LINK4.ANCHOR title=MENU.LINK4.TITLE[lang] ) #{MENU.LINK4.TITLE[lang]}]
+      li #[a(href=MENU.LINK5.ANCHOR title=MENU.LINK5.TITLE[lang] ) #{MENU.LINK5.TITLE[lang]}]
+      li #[a(href='#contact' title=MENU.CTA[lang] class='button') #{MENU.CTA[lang]}]
+  +menu-js()
+
+mixin menu-js()
+  script.
+      let burger = document.getElementById('burger');
+      let menu = document.getElementById('menu');
+      let menuAnchors = menu.querySelectorAll('a')
+      burger.addEventListener('click', (e) => {
+          burger.classList.toggle('on')
+          menu.classList.toggle('on')
+
+          for (let item of menuAnchors) {
+            item.addEventListener('click', (e) => {
+                burger.classList.remove('on')
+                menu.classList.remove('on')
+            }, false);
+          }          
+      }, false);
+    

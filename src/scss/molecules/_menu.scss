@@ -1,0 +1,76 @@
+/***
+ *  🛴 MENU
+ *
+ *
+ ***/
+
+#menu {
+  position: fixed;
+  background: darken($color-primary, $dark);
+  left: 0;
+  width: 80%;
+  height: 100vh;
+  transform: translateX(-105%);
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+
+  @include breakpoint(tablet) {
+    background: transparent;
+    position: relative;
+    box-shadow: none;
+    transform: none;
+    transform: none;
+    width: auto;
+    height: auto;
+    left: auto;
+  }
+
+  ul {
+    margin: $spacing-m 0 0 0;
+    padding: 0;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0;
+    }
+
+    li {
+      a:not(.button) {
+        font-size: $mobile-font-size-xxl;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: $spacing-m 0 $spacing-m $spacing-l;
+        display: block;
+        white-space: nowrap;
+
+        @include breakpoint(tablet) {
+          font-size: $tablet-font-size-l;
+          padding: 0 $spacing-m 0 0;
+        }
+
+        &.active {
+          font-family: $font-secondary;
+          text-decoration: underline;
+        }
+
+      }
+
+      .button {
+        margin: $spacing-m 0 $spacing-m $spacing-l;
+
+        @include breakpoint(tablet) {
+          margin: $spacing-m 0;
+        }
+
+      }
+    }
+  }
+
+
+  &.on {
+    transform: translateX(0);
+  }
+}
